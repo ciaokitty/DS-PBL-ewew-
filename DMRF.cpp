@@ -1,10 +1,13 @@
 /*
-SOFTWARE DEVELOPMENT LAB-2 
+SOFTWARE DEVELOPMENT LAB-2 (15B17CI271)
 MINI PROJECT
 
 Title: DELHI METRO ROUTE FINDER (DMRF)
 
-
+Team Members:
+1) Akash Sharma (21103093)
+2) Mukund Sarda (21103105)
+3) Karanjot Singh (21103096)
 */
 
 #include <iostream>
@@ -19,7 +22,7 @@ Title: DELHI METRO ROUTE FINDER (DMRF)
 
 using namespace std;
 
-static vector<string> blue1, blue2, yellow, red, magenta, green1, green2, orange, violet, pink, grey, white;
+static vector<string> blue1, blue2, yellow, red, magenta, green1, green2, orange, violet, pink, grey;
 static int st;
 
 class name
@@ -393,7 +396,7 @@ public:
 
     name() {}
 
-    name(char s[])
+    name(const char* s)
     {
         int x;
 
@@ -637,10 +640,10 @@ vector<string> convert(string s)
         return yellow;
 
     else if (s == "violet")
-        return violet;
-
-    return white;
-}
+        return violet; 
+    
+    return vector<string>();
+    }
 
 void delay(int msecs)
 {
@@ -668,6 +671,7 @@ int get_index(vector<string> v, string s)
 
 }
 
+
 class stations
 {
 
@@ -675,7 +679,8 @@ public:
 
     stations()
     {
-        name n("DMRF");
+
+        name n("ME PAGAL HOJAUNGA");
 
         delay(300);
         system("color 0A");
@@ -1206,11 +1211,14 @@ public:
                     st = a + b;
                     system("color 0F");
                     return a + b;
+                    
                 }
             }
         }
-        return 0;
+      return -1;  
     }
+    
+    
 
 };
 
